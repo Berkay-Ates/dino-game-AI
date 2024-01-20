@@ -1,0 +1,24 @@
+# Dino Game Deep Q-Network (DQN) Agent
+
+This repository contains code for training a Deep Q-Network (DQN) agent to play the Dino Game, a popular game that can be played in the Chrome browser when there is no internet connection. The agent is implemented using the Stable Baselines3 library.
+
+## 1. Installation
+
+Before running the code, make sure to install the required dependencies. You can use the following commands to install them:
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install stable-baselines3[extra] protobuf==3.20.*
+pip install mss 
+pip install pydirectinput 
+pip install pytesseract
+pip install gym
+
+
+env = WebGame()
+obs = env.get_observation()[0]
+plt.imshow(cv2.cvtColor(obs, cv2.COLOR_BGR2RGBA))
+res, done, done_cap = env.get_done()
+res
+done
+plt.imshow(done_cap)
